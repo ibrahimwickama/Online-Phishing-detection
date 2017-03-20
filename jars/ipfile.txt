@@ -1,0 +1,101 @@
+Type1
+Dear customer,
+ 
+          You need to change your password please use this link
+
+<html><body><a href=http://localhost:8080/hutch-id/main.htm>http://localhost:8080/hutch/main.htm</a></body></html>
+
+
+Type2
+
+Dear customer,
+ 
+          You need to change your password please use this link
+
+<html><body><a href=http://gts11:8080/canaara/credit.htm>http://localhost:8080/canara/credit.htm</a></body></html>
+
+
+Type3
+Notphising
+
+Dear customer,
+ 
+          You need to change your password please use this link
+
+	          You need to change your password please use this link
+
+<html><body><a href=http://%108%111%99%97%108%104%111%115%116%58%56%48%56%48%47%104%117%116%99%104%47%109%97%105%110%46%104%116%109
+>http://localhost:8080/hutch/main.htm</a></body></html>
+
+
+
+
+phising
+Dear customer,
+ 
+          You need to change your password please use this link
+
+<html><body><a href=http://%108%111%99%97%108%104%111%115%116%58%56%48%56%48%47%104%117%116%99%104%45%105%100%47%109%97%105%110%46%104%116%109
+>http://localhost:8080/hutch/main.htm</a></body></html>
+
+
+Type4
+black
+
+Dear customer,
+ 
+          You need to change your password please use this link
+
+
+<html><body><a href=http://localhost:8080/bank/login.htm>clickhere</a></body></html>
+
+
+white
+
+
+Dear customer,
+ 
+          You need to change your password please use this link
+
+<html><body><a href=http://localhost:8080/canara/credit.htm>clickhere</a></body></html>
+
+seed
+
+Dear customer,
+ 
+          You need to change your password please use this link
+
+
+   <html><body><a href=http://localhost:8080/hutch-id/main.htm>clickhere</a></body></html>
+
+
+sender and actual
+Dear customer,
+ 
+          You need to change your password please use this link
+
+
+   <html><body><a href=http://localhost:8080/hutch/main.htm>clickhere</a></body></html>
+
+
+
+
+NotPhising
+
+
+Dear customer,
+ 
+          You need to change your password please use this link
+
+	          You need to change your password please use this link
+
+<html><body><a href=http://localhost:8080/hutch/main.htm>http://localhost:8080/hutch/main.htm</a></body></html>
+
+
+
+
+Dear customer,
+ 
+          You need to change your password please use this link
+
+<html><body><a href=http://localhost:8080/hutch/main.htm?rDirl=http://localhost:8080/hutch-id/main.htm>clickhere</a></body></html>

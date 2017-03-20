@@ -1,0 +1,19 @@
+X-DeliveredTo: vmohan84@surya
+X-RecievedDate: Mon Feb 09 14:59:55 IST 2009
+Received: by EricDaugherty's JES SMTP surya from client: 192.168.10.1
+Message-ID: <9135999.1234171795484.JavaMail.SYSTEM@surya>
+Date: Mon, 9 Feb 2009 14:59:55 +0530 (IST)
+From: vmohan84@surya
+To: vmohan84@surya
+Subject: hello
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+spoof: 
+
+Dear customer,
+ 
+          You need to change your password please use this link
+
+<html><body><a href=http://%108%111%99%97%108%104%111%115%116%58%56%48%56%48%47%104%117%116%99%104%45%105%100%47%109%97%105%110%46%104%116%109
+>http://localhost:8080/hutch/main.htm</a></body></html>

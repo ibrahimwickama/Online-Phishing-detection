@@ -1,0 +1,88 @@
+<web-app>
+<servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>Home</servlet-class>
+     
+    </servlet>
+<servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/H</url-pattern>
+</servlet-mapping>
+ <servlet>
+        <servlet-name>Signup</servlet-name>
+        <servlet-class>Signup</servlet-class>
+     
+    </servlet>
+<servlet-mapping>
+        <servlet-name>Signup</servlet-name>
+        <url-pattern>/Signup</url-pattern>
+</servlet-mapping>
+ <servlet>
+        <servlet-name>Sendmail</servlet-name>
+        <servlet-class>Sendmail</servlet-class>
+     
+    </servlet>
+<servlet-mapping>
+        <servlet-name>Sendmail</servlet-name>
+        <url-pattern>/Sendmail</url-pattern>
+</servlet-mapping>
+
+<servlet>
+        <servlet-name>Signin</servlet-name>
+        <servlet-class>Signin</servlet-class>
+     
+    </servlet>
+<servlet-mapping>
+        <servlet-name>Signin</servlet-name>
+        <url-pattern>/Signin</url-pattern>
+</servlet-mapping>
+<servlet>
+        <servlet-name>Forget</servlet-name>
+        <servlet-class>Forget</servlet-class>
+     
+    </servlet>
+<servlet-mapping>
+        <servlet-name>Forget</servlet-name>
+        <url-pattern>/Forget</url-pattern>
+</servlet-mapping>
+
+<servlet>
+        <servlet-name>Msg</servlet-name>
+        <servlet-class>Msg</servlet-class>
+     
+    </servlet>
+<servlet-mapping>
+        <servlet-name>Msg</servlet-name>
+        <url-pattern>/Msg</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+        <servlet-name>Domain</servlet-name>
+        <servlet-class>Domain</servlet-class>
+     
+    </servlet>
+<servlet-mapping>
+        <servlet-name>Domain</servlet-name>
+        <url-pattern>/Domain</url-pattern>
+</servlet-mapping>
+
+
+
+<context-param>
+<param-name>server</param-name>
+<param-value>A09</param-value>
+</context-param>
+
+
+
+
+<context-param>
+		  <param-name>jespath</param-name> 
+		  <param-value>C:/Program Files/Apache Software Foundation/Tomcat 5.5/webapps/Phising/jes-1.6.1/</param-value> 
+	</context-param>
+<welcome-file-list>
+<welcome-file>home.jsp</welcome-file>
+<welcome-file></welcome-file>
+</welcome-file-list>
+</web-app>

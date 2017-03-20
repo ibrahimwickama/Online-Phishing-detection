@@ -1,0 +1,5 @@
+CREATE TABLE  "LIST" 
+   (	"NAME" VARCHAR2(4000), 
+	"ROLE" VARCHAR2(4000)
+   )
+/

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Phishing is a new type of networ</title>
+    <script language=javascript>
+        function back() {
+            history.back();
+        }
+    </script>
+</head>
+
+<body>
+<h2><font face="Century" color="#000080">Architecture Diagram</font></h2>
+<font color="#000080">
+    <br><br>
+</font>
+<center><font color="#000080"><img src="arc.jpg"></font></center>
+<p align=justify>
+    <font color="#000080">LinkGuard is the key component of the implementation.
+        It is a stand alone windows program with GUI (graphic
+        user interface). It's composed of 5 parts as illustrated in
+        Fig. 3: Analyzer, Alerter, Logger, Comm, and Database. The
+        functionalities of these 5 parts are given below: </font>
+</p>
+<p align=justify>
+    <font color="#000080"><b>Comm: </b>Communicate with the whook.dll of all of the
+        monitored processes, collect data related to user input from
+        other processes (e.g. IE, outlook, firefox, etc.), and send
+        these data to the Analyzer, it can also send commands (such
+        as block the phishing sites) from the LinkGuard executive
+        to whook.dll. The communication between the LinkGuard
+        process and other processes is realized by the shared memory
+        mechanism provided by the operating system.
+
+    </font>
+</p>
+<p align=justify>
+    <font color="#000080"><b>Database: </b>Store the whitelist, blacklist, and the user input
+        URLs.
+    </font>
+</p>
+<p align=justify>
+    <font color="#000080">Analyzer: It is the key component of LinkGuard, which
+        implements the LinkGuard algorithm,. It uses data provided
+        by Comm and Database, and sends the results to the Alert
+        and Logger modules.</font></p>
+<p align=justify>
+    <font color="#000080"><b>Alerter:</b> When receiving a warning messages from Analyzer,
+        it shows the related information to alert the users and
+        send back the reactions of the user back to the Analyzer.</font></p>
+<p align=justify>
+    <font color="#000080"><b>&nbsp;Logger:</b> Archive the history information, such as user
+        events, alert information, for future use. </font>
+</p>
+<form>
+    <center><font color="#000080"><input type=button name=b1 value="Back" onclick="back()"></font></center>
+</form>
+</body>
+
+</html>

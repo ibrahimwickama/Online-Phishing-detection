@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="file://$TOMCAT_HOME$/common/lib/mail.jar" />
+    <libelement value="file://$TOMCAT_HOME$/common/lib/activation.jar" />
+    <libelement value="file://C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\Phising\lib" />
+    <varelement var="file://$TOMCAT_HOME$/common/lib/servlet-api.jar" value="TOMCAT_HOME/common/lib/servlet-api.jar" />
+    <varelement var="file://$TOMCAT_HOME$/common/lib/jasper-runtime.jar" value="TOMCAT_HOME/common/lib/jasper-runtime.jar" />
+    <varelement var="file://$TOMCAT_HOME$/common/lib/jsp-api.jar" value="TOMCAT_HOME/common/lib/jsp-api.jar" />
+    <src_description expected_position="4">
+      <src_folder value="file://$MODULE_DIR$/WEB-INF/src" expected_position="4" />
+      <src_folder value="file://$MODULE_DIR$/work" expected_position="5" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/WEB-INF/classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/WEB-INF/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/work" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/WEB-INF/lib" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library" exported="">
+      <library name="servlet-api.jar">
+        <CLASSES>
+          <root url="file://$TOMCAT_HOME$/common/lib/servlet-api.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library name="jsp-api.jar">
+        <CLASSES>
+          <root url="file://$TOMCAT_HOME$/common/lib/jsp-api.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library name="jasper-runtime.jar">
+        <CLASSES>
+          <root url="file://$TOMCAT_HOME$/common/lib/jasper-runtime.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library name="mail.jar">
+        <CLASSES>
+          <root url="file://$TOMCAT_HOME$/common/lib/mail.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="lib" level="project" />
+  </component>
+</module>

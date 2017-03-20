@@ -1,0 +1,8 @@
+2009-03-16 16:25:36,343 - [main] Mail - Logger using log4j.
+2009-03-16 16:25:36,359 - [main] ConfigurationManager - Loaded 1 local domains.
+2009-03-16 16:25:36,359 - [main] ConfigurationManager - Loaded 8 users from user.conf
+2009-03-16 16:25:36,375 - [SMTP] ServiceListener - Could not create ServiceListener on address: localhost port: 25.  No connections will be accepted on this port!
+2009-03-16 16:25:36,390 - [POP3] ServiceListener - Accepting Connections on port: 110
+2009-03-16 16:25:37,843 - [Thread-1] ShutdownService - Server is shutting down.
+2009-03-16 16:25:37,843 - [Thread-1] Mail - Shutting down Mail Server.  Server will shut down in 60 seconds.
+2009-03-16 16:25:37,843 - [Thread-1] Pop3Processor - Shutting down Pop3Processor.

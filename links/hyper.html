@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Phishing is a new type of networ</title>
+    <script language=javascript>
+        function back() {
+            history.back();
+        }
+    </script>
+</head>
+
+<body>
+<h2><font face="Century">Introduction of Phishing
+    Attacks</font></h2>
+<p align=justify>
+    <font color="#000080">We classified the hyperlinks used in the
+        phishing e-mail into the following categories:<br><br>
+        1) The hyperlink provides DNS domain names in the
+        anchor text, but the destination DNS name in the visible
+        link doesn't match that in the actual link. For instance,
+        the following hyperlink:
+    </font>
+    <font color="#800080">&lt;a href= "http://www.profusenet.net/checksession.php">
+        https://secure.regionset.com/EBanking/logon/&lt;/a&gt;
+    </font>
+    <font color="#000080">appears to be linked to secure.regionset.com, which
+        is the portal of a bank, but it actually is linked to a
+        phishing site www.profusenet.net.<br><br>
+        2) Dotted decimal IP address is used directly in the URI
+        or the anchor text instead of DNS name. See below for
+        an example.</font><font color="#800080">&lt;a href= "http://61.129.33.105/secured-site/www.skyfi.
+    com/ index.html?MfclSAPICommand=SignInFPP&
+    UsingSSL= 1"> SIGN IN&lt;/a&gt;</font><font color="#000080"><br><br>
+    3) The hyperlink is counterfeited maliciously by using
+    certain encoding schemes. There are two cases: a)
+    The link is formed by encoding alphabets into their
+    corresponding ASCII codes. See below for such a
+    hyperlink.
+</font>
+    <font color="#800080">&lt;a href="http://034%02E%0333%34%2E%311%39%355%2E
+        %o340o31:%34%39%30%33/%6C/%69%6E%64%65%78
+        %2E%68%74%6D"> www.citibank.com &lt;/a&gt;</font><font color="#000080">
+    while this link is seemed pointed www.citibank.com, it
+    actually points to http://4.34.195.41:34/l/index.htm.<br>
+    b) Special characters (e.g. ( in the visible link) are
+    used to fool the user to believe that the e-mail is from a
+    trusted sender. For instance, the following link seems is
+    linked to amazon, but it actually is linked to IP address
+    69.10.142.34.
+    http://www.amazon.com:fvthsgbljhfcs83infoupdate
+    @69.10.142.34.<br><br>
+    4) The hyperlink does not provide destination information
+    in its anchor text and uses DNS names in its URI. The
+    DNS name in the URI usually is similar with a famous
+    company or organization. For instance, the following
+    link seems to be sent from paypal, but it actually is not.
+    Since paypal-cgi is actually registered by the phisher
+    to let the users believe that it has something to do with
+    paypal
+</font>
+    <font color="#800080">&lt;a href= "http://www.paypal-cgi.us/webscr.php?
+        cmd=LogIn"> Click here to confirm your account
+        &lt;/a&gt;<br><br>
+    </font>
+    <font color="#000080">5) The attackers utilize the vulnerabilities of the
+        target Web site to redirect users to their phishing sites or to launch CSS
+        (cross site scripting) attacks. For example, the following link </font>
+    <font color="#800080">&lt;a href=&quot;http://usa.visa.com/track/dyredirjsp?rDirl=
+        http://200.251.251.10/.verified/&quot;&gt; Click here &lt;a&gt; </font>
+    <font color="#000080">Once clicked, will redirect the user to the phishing site
+        200.251.251.10 due to a vulnerability of usa.visa.com.</font></p>
+<form>
+    <center><input type=button name=b1 value="Back" onclick="back()"></center>
+</form>
+</body>
+
+</html>

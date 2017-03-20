@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry path="org.eclipse.jdt.launching.JRE_CONTAINER" kind="con"/>
+	<classpathentry path="TOMCAT_HOME/common/lib/servlet-api.jar" kind="var"/>
+	<classpathentry path="TOMCAT_HOME/common/lib/jasper-runtime.jar" kind="var"/>
+	<classpathentry path="TOMCAT_HOME/common/lib/jsp-api.jar" kind="var"/>
+	<classpathentry path="WEB-INF/src" kind="src"/>
+	<classpathentry path="work" output="work" kind="src"/>
+	<classpathentry path="C:/Program Files/Apache Software Foundation/Tomcat 9.0/common/lib/mail.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/Apache Software Foundation/Tomcat 9.0/common/lib/activation.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/Apache Software Foundation/Tomcat 9.0/webapps/Phising/lib/mysql-connector-java-6.0.4.jar" kind="lib"/>
+	<classpathentry path="WEB-INF/classes" kind="output"/>
+	<classpathentry path="WEB-INF/lib" kind="lib"/>
+</classpath>

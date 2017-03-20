@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/annotations-api-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/catalina-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/ecj-3.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/el-api-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jasper-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/javax.servlet-3.0-b72.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jsp-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jsp-api-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/juli-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/mysql-connector-java-6.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/servlet-api-2.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
