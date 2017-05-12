@@ -27,17 +27,17 @@ public class Sendmail extends HttpServlet {
         if (result) {
             Mail m = new Mail();
             HttpSession ses = request.getSession();
-            boolean ack = m.send(getServletConfig().getServletContext().getInitParameter("server"), to, (String) ses.getAttribute("user"), sub, body, spoof);
+            String server = getServletConfig().getServletContext().getInitParameter("server");
+            String user = ((String) ses.getAttribute("user")).concat("@").concat(server);
+            boolean ack = m.send(server, to, user , sub, body, spoof);
             if (ack) {
                 RequestDispatcher rq = request.getRequestDispatcher("compose.jsp");
                 request.setAttribute("msg", "Your Message Sent");
                 rq.forward(request, response);
             } else {
-
                 RequestDispatcher rq = request.getRequestDispatcher("compose.jsp");
                 request.setAttribute("msg", "The Message Sending failure");
                 rq.forward(request, response);
-
             }
 
         } else {
@@ -49,6 +49,7 @@ public class Sendmail extends HttpServlet {
 
     public boolean check(String to) {
         boolean exist = false;
+        to = to.substring(0,to.lastIndexOf('@'));
         try {
             String dbURl = "jdbc:mysql://localhost:3306/phising";
             String username = "root";

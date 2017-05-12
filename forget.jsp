@@ -17,7 +17,7 @@
                 alert("Please Enter Valid ID. ex senthil@global.com");
 
             else {
-                document.forms[0].action = "http://localhost:8080/Phising/Forget";
+                document.forms[0].action = "/Phising/Forget";
                 document.forms[0].submit();
             }
         }
@@ -40,10 +40,7 @@
                             System.out.println("");
                         } else {%>
                         <font color=#009900>Show Msg:</font>
-                        <%
-                                System.out.println(request.getAttribute("msg"));
-                            }
-                        %></b></font></center>
+                        <% request.getAttribute("msg"); } %></b></font></center>
             </div>
             <input type=image src="image/hom.gif" onclick="hom()"><br>
             &nbsp;<p>&nbsp;</div>

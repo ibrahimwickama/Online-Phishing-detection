@@ -22,7 +22,7 @@ public class Signup extends HttpServlet {
         ServerReg s = new ServerReg();
         member.name = request.getParameter("p1");
         String user = request.getParameter("p2");
-        member.id = user + "@global.com";
+        member.id = user;
         member.pwd = request.getParameter("p31");
         member.secq = request.getParameter("p4");
         member.seca = request.getParameter("p5");

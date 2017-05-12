@@ -23,7 +23,7 @@
                 alert("Please Enter correct security code");
             else {
                 alert("correct");
-                document.forms[0].action = "http://localhost:8080/Phising/Signup";
+                document.forms[0].action = "/Phising/Signup";
                 document.forms[0].submit();
             }
 

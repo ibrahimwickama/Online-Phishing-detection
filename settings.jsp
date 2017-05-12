@@ -17,7 +17,7 @@
                 alert("Please Enter the domain name");
             }
             else {
-                document.forms[0].action = "http://localhost:8080/Phising/Domain";
+                document.forms[0].action = "/Phising/Domain";
                 document.forms[0].submit();
             }
 

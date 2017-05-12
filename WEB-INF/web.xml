@@ -56,6 +56,7 @@
         <url-pattern>/Msg</url-pattern>
     </servlet-mapping>
 
+
     <servlet>
         <servlet-name>Domain</servlet-name>
         <servlet-class>Domain</servlet-class>
@@ -66,10 +67,12 @@
         <url-pattern>/Domain</url-pattern>
     </servlet-mapping>
 
+
     <context-param>
         <param-name>server</param-name>
         <param-value>localhost</param-value>
     </context-param>
+
 
     <context-param>
         <param-name>jespath</param-name>

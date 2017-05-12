@@ -29,11 +29,11 @@ public class Forget extends HttpServlet {
         if (result) {
 
             RequestDispatcher rq = request.getRequestDispatcher("forget.jsp");
-            request.setAttribute("msg", "U r member.Ur Password is " + userPass);
+            request.setAttribute("msg", "Your Password is " + userPass);
             rq.include(request, response);
         } else {
             RequestDispatcher rq = request.getRequestDispatcher("forget.jsp");
-            request.setAttribute("msg", "Invalid Entry,Try again");
+            request.setAttribute("msg", "Invalid Entry, Try again");
             rq.include(request, response);
         }
     }

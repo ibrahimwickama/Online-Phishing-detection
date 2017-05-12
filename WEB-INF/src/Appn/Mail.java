@@ -16,21 +16,21 @@ import java.util.Properties;
 public class Mail {
     public static void main(String a[]) {
         Mail m = new Mail();
-        m.send("gts11", "senthil@global.com", "skumar@global.com", "tod", "today" + "\n" + "fai", "skumar");
-        //	m.receive("gts11","senthil@gts11","javajava");
+        //m.send("localhost", "wickerman@global.com", "admin@localhost", "tod", "today" + "\n" + "fai", "skumar");
+        //m.receive("localhost","wickerman@localhost","wickerman2123");
     }
 
     /**
      * "send" method to send the message.
      */
 
-    public boolean send(String smtpServer, String to, String from
-            , String subject, String body, String spoof) {
+    public boolean send(String smtpServer, String to, String from, String subject, String body, String spoof) {
         try {
             String j = to.substring(to.lastIndexOf("@"), to.length());
             to = to.replace(j, "@" + smtpServer);
             from = from.replace(j, "@" + smtpServer);
-            System.out.print("to" + to);
+            System.out.println("To: " + to);
+            System.out.println("From: " + from);
             Properties props = System.getProperties();
             // -- Attaching to default Session, or we could start a new one --
             props.put("mail.smtp.host", smtpServer);
@@ -49,7 +49,7 @@ public class Mail {
             msg.setSentDate(new Date());
             // -- Send the message --
             Transport.send(msg);
-            System.out.println("Message sent OK.");
+            System.out.println("[+]Message sent OK.");
             return true;
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -118,7 +118,7 @@ public class Mail {
      * "receive" method to fetch messages and process them.
      */
     public MsgForm[] receive(String popServer, String popUser, String popPassword) {
-        popUser = popUser.substring(0, popUser.lastIndexOf("@"));
+        popUser = popUser.concat("@").concat(popServer);
         Store store = null;
         Folder folder = null;
         MsgForm[] mf = null;
@@ -128,11 +128,14 @@ public class Mail {
             Session session = Session.getDefaultInstance(props, null);
             // -- Get hold of a POP3 message store, and connect to it --
             store = session.getStore("pop3");
-            store.connect(popServer, popUser, popPassword);
+            System.out.println("[+] URL: "+store.getURLName().toString());
+            System.out.println("[+] Server: "+popServer);
+            System.out.println("[+] User: "+popUser);
+            System.out.println("[+] Password: "+popPassword);
+            store.connect(popServer,110, popUser, popPassword);
 
             // -- Try to get hold of the default folder --
             folder = store.getDefaultFolder();
-
 
             if (folder == null) throw new Exception("No default folder");
             // -- ...and its INBOX --

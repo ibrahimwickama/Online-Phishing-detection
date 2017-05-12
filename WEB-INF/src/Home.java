@@ -16,5 +16,4 @@ public class Home extends HttpServlet {
         rq.include(request, response);
     }
 
-
 }

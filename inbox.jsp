@@ -1,12 +1,19 @@
-<%! Appn.MsgForm[] mf; %>
-<html>
-<head>
-    <meta http-equiv="Content-Language" content="en-us">
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <title>username
-        signout</title>
 
-    <script type="text/javascript">
+<%@ page import="Appn.Mail" %>
+<%! Appn.MsgForm[] mf; %>
+
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Global Mail/inBox</title>
+   <meta name="viewport" content="width=device-width">
+
+
+  
+  <link rel="stylesheet" href="css/main.css">
+
+   
+  <script type="text/javascript">
         onload = function () {
             if (!document.getElementsByTagName || !document.createTextNode) return;
             var rows = document.getElementById('table1').getElementsByTagName('tbody')[0].getElementsByTagName('tr');
@@ -14,31 +21,46 @@
                 rows[i].onclick = function () {
                     var v = "" + this.rowIndex;
                     document.forms[0].index.value = v;
-                    document.forms[0].action = "http://localhost:8080/Phising/Msg";
+                    document.forms[0].action = "/Phising/Msg";
                     document.forms[0].submit();
                 }
             }
         }
+		
     </script>
+
 </head>
 
 <body>
-
 <form method="get">
-    <div style="position: absolute; width: 45px; height: 48px; z-index: 2; left:710px; top:181px" id="layer2">
-        <div style="position: absolute; width: 834px; height: 100px; z-index: 1; left: -731px; top: -184px" id="layer3">
-            <div style="position: absolute; width: 172px; height: 28px; z-index: 1; left: 329px; top: 49px" id="layer7">
-                <b><font size="7" color="#FFFFFF" face="Chiller">Global Mail</font></b></div>
-            <img src="image/in.jpg"></div>
-        &nbsp;</div>
-    <p><font color="#970000">
-    </font>
-        <font color="#970000"></font></p>
-    <div style="position: absolute; width: 669px; height: 169px; z-index: 1; left:2px; top:141px" id="layer1">
-
-        <blockquote>
-            <blockquote>
-                <blockquote>
+  <aside id="sidebar" class="nano">
+  <div class="nano-content">
+		Hi.! <%=session.getAttribute("user")%>
+    <div class="logo-container"><span class="logo glyphicon glyphicon-envelope"></span><b>Global</B>Mail</div><a href="compose.jsp" class="compose-button">Compose</a>
+    <menu class="menu-segment">
+      <ul>
+        <li class="active"><a href="inbox.jsp">Inbox</a></li>
+        <li><a href="phisbox.jsp">Phish Box</a></li>
+        <li><a href="comingsoon.jsp">Sent</a></li>
+        <li><a href="comingsoon.jsp">Drafts</a></li>
+        <li><a href="comingsoon.jsp">Trash</a></li>
+      </ul>
+    </menu>
+    <div class="separator"></div>
+    <a href="comingsoon.jsp" class="about-button">About</a>
+    <a href="logout.jsp" class="logout-button">Log out</a>
+   
+   
+    <div class="bottom-padding"></div>
+  </div>
+</aside>
+<main id="main">
+  <div class="overlay"></div>
+  <header class="header">
+<div class="search-box">
+      <input placeholder="Search..."><span class="icon glyphicon glyphicon-search"></span>
+    </div>
+     <blockquote>
                     <h1><b><font size="7" color="#800000" face="Chiller">Inbox</font><font size="6" color="#800000"
                                                                                            face="Chiller">
                     </font></b><font color="#000080" face="French Script MT"><b>
@@ -46,61 +68,22 @@
                             <input type=hidden name="index" size="20"></font></b></font>
                     </h1>
                 </blockquote>
-                <div style="position: absolute; width: 317px; height: 59px; z-index: 1; left: 459px; top: 0px"
-                     id="layer5">
-                    <div style="position: absolute; width: 55px; height: 24px; z-index: 1; left: 129px; top: 26px"
-                         id="layer6">[<b><font size="2">
-                        <a href="logout.jsp">Logout</a> </font></b>]
-                    </div>
-                    <center>
-                        <font size="4" face="Bell MT" color="#000080"><%=session.getAttribute("user")%>
-                        </font></center>
-                </div>
-            </blockquote>
-        </blockquote>
-        <p>
-        </p>
-        <!--<table  width="663">
-        <tr><td>-->
-        <table width="778">
-            <tr>
-                <td width="772" background="image/b11.jpg" height="50">
-                    <blockquote>
-
-                        <center>
-                            <blockquote>
-                                <blockquote>
-                                    <blockquote>
-                                        <pre><font face="Baskerville Old Face"><b><a href="inbox.jsp"><font size="4"
-                                                                                                            color="#800080">InBox</font></a></b></font><font
-                                                size="5"><font color="#800080">       </font></font><b><a
-                                                href="phisbox.jsp"><font color="#800080" face="Baskerville Old Face"
-                                                                         size="4">PhisBox</font></a></b><font
-                                                color="#800080" size="5">      </font><b><a href="compose.jsp"><font
-                                                size="4" color="#800080" face="Baskerville Old Face">ComposeMail</font></a><font
-                                                size="4" color="#800080" face="Baskerville Old Face">  </font></b></pre>
-                                    </blockquote>
-                                </blockquote>
-                            </blockquote>
-                        </center>
-
-                        <!--<td>-->
-                    </blockquote>
-            </tr>
-            <tr>
-                <td height="136">
-                    <blockquote>
-                        <p>&nbsp;</p>
-                        <table border="1" width="85%" id="table1" cellspacing="1">
-                            <tr>
+				</header>
+  
+      
+        <table border="0.5" width="100%" id="table1" cellspacing="1">
+							<tr>
                                 <th width="27"><font color="#AA6600" size="4">
                                     <input type="checkbox" name="C1" value="ON" style="font-weight: 700"></font></th>
                                 <th width="246"><b><font size="4" color="#008000">Sender</font></b></th>
                                 <th><b><font size="4" color="#008000">Subject</font></b></th>
                                 <th><b><font size="4" color="#008000">Date</font></b></th>
                             </tr>
-                            <%Appn.Mail m = new Appn.Mail(); %>
-                            <% mf = m.receive(application.getInitParameter("server"), (String) session.getAttribute("user"), (String) session.getAttribute("pwd")); %>
+                           
+                            <%Mail m = new Mail();
+                            %>
+                            <% String server= application.getInitParameter("server"), user = (String) session.getAttribute("user"), password = (String) session.getAttribute("pwd"); %>
+                            <% mf = m.receive(server, user, password); %>
                             <% session.setAttribute("allmsg", mf); %>
                             <% for (int i = 0; i < mf.length; i++) { %>
                             <% String fr = mf[i].from; %>
@@ -127,23 +110,22 @@
                                     <p align="center"><font color="#D27E00" size="3">
                                         <input type="checkbox" name="C1" value="ON" style="font-weight: 700"></font>
                                 </td>
-                                <td width="246"><b><font color="#D27E00"><%=fr%>
+                                <td width="370"><b><font color="#0D0D0D"><%=fr%>
                                 </font></b></td>
-                                <td><b><font color="#D27E00"><%=mf[i].subject %>
+                                <td><b><font color="#0D0D0D"><%=mf[i].subject %>
                                 </font></b></td>
-                                <td width="169"><b><font color="#D27E00"><%=mf[i].date %>
+                                <td width="159"><b><font color="#0D0D0D"><%=mf[i].date %>
                                 </font></b></td>
                             </tr>
                             <% } %>
                         </table>
-                    </blockquote>
-                    <!--</tr>
-                    </table>-->
-            </tr>
-        </table>
-    </div>
-</form>
+      <a href="#" class="load-more-link">Show more messages</a>
+ 
+</main>
 
+
+    <script src="js/index.js"></script>
+
+	</form>
 </body>
-
 </html>

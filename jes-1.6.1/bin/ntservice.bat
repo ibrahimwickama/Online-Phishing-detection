@@ -7,8 +7,8 @@ rem # for your environment before running this script!
 rem # These values should be changed for your local system
 
 set SERVICE_NAME=JavaEmailServer
-set JES_HOME_DIR=C:\Program Files\Apache Software Foundation\Tomcat 5.5\webapps\Phising\jes-1.6.1
-set JDK_HOME_DIR=C:\Program Files\Java\jdk1.6.0_10
+set JES_HOME_DIR=C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\Phising\jes-1.6.1
+set JDK_HOME_DIR=C:\Program Files\Java\jdk1.8.0_121
 rem # This must be classic, hotspot, or server.
 set JDK_MODE=server
 

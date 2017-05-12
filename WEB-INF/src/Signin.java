@@ -13,13 +13,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Signin extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         Member member = new Member();
-        member.id = request.getParameter("p1") + "@global.com";
+        member.id = request.getParameter("p1");
         member.pwd = request.getParameter("p2");
         boolean result = signin(member);
 
@@ -27,18 +29,19 @@ public class Signin extends HttpServlet {
             HttpSession ses = request.getSession(true);
 
             if (ses != null) {
-
                 ses.setAttribute("user", member.id);
                 ses.setAttribute("pwd", member.pwd);
             }
 
             RequestDispatcher rq = request.getRequestDispatcher("inbox.jsp");
             rq.forward(request, response);
+            Logger.getGlobal().log(Level.INFO,"[+]User email: "+member.id);
 
         } else {
             RequestDispatcher rq = request.getRequestDispatcher("home.jsp");
-            request.setAttribute("msg", "In valid entries");
+            request.setAttribute("msg", "Invalid entries");
             rq.forward(request, response);
+            Logger.getGlobal().log(Level.INFO,"[+]User email: "+member.id);
         }
     }
 
@@ -50,15 +53,14 @@ public class Signin extends HttpServlet {
             //PreparedStatement st = conn.prepareStatement("select * from MEMBER where id = '"+member.id+"'"+"and pwd= '"+member.pwd+"'");
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery("select * from MEMBER where id ='" + member.id + "' and pwd='" + member.pwd + "'");
-            System.out.println(member.id + "ggg:" + member.pwd);
+            System.out.println(member.id + " ggg: " + member.pwd);
             while (rs.next()) {
                 exist = true;
-                System.out.println("step1");
+                System.out.println("[+] Authentication successful");
             }
 
             st.close();
             conn.close();
-
         } catch (Exception e) {
             e.printStackTrace();
             return false;

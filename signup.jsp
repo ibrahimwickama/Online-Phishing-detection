@@ -1,17 +1,20 @@
+<!DOCTYPE html>
 <%@ page import="java.util.Random" %>
-<html
-        xmlns="http://www.w3.org/TR/REC-html40">
+<html >
 <head>
-    <meta http-equiv="Content-Language" content="en-us">
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <title>Sign Up | Global Mail</title>
-    <script>
+  <meta charset="UTF-8">
+  <title>Sign-Up/Login Form</title>
+ 
+  
+      <link rel="stylesheet" href="css/stylelogin.css">
+
+ <script>
         function che() {
             var code = document.forms[0].t1.value;
             alert("Secret code : " + code)
         }
         function si() {
-            alert("hai");
+            alert("Processing...");
             var name = document.forms[0].p1.value;
             var id = document.forms[0].p2.value;
             var pass = document.forms[0].p31.value;
@@ -32,7 +35,7 @@
                 alert("Please Enter correct security code");
             else {
                 alert("correct");
-                document.forms[0].action = "http://localhost:8080/Phising/Signup";
+                document.forms[0].action = "/Phising/Signup";
                 document.forms[0].submit();
             }
 
@@ -42,22 +45,11 @@
             document.forms[0].submit();
         }
     </script>
+  
 </head>
-<body background="image/theme.gif">
-<div style="position: absolute; width: 100px; height: 100px; z-index: 4; left: 610px; top: 13px" id="layer7">
-    <div style="position: absolute; width: 246px; height: 33px; z-index: 2; left: -317px; top: 104px" id="layer10">
-        <div style="position: absolute; width: 100px; height: 27px; z-index: 1; left: -292px; top: -118px" id="layer11">
-            <input type=image src="image/hom.gif" onclick="hom()"><br>
-            &nbsp;<p>&nbsp;</div>
-        <u><font face="Book Antiqua" size="4" color="#008000">Registration Form</font></u></div>
-    <input border="0" src="image/globe1.gif" name="I5" width="86" height="83" type="image">
-    <div style="position: absolute; width: 100px; height: 19px; z-index: 1; left: 4px; top: 34px" id="layer8">
-        <b><font face="French Script MT" color="#00FFFF" size="5">
-            <marquee width="78">Global Mail</marquee>
-        </font></b></div>
-    <p>&nbsp;</div>
 
-<p>&nbsp;</p>
+<body background="images/blur.jpg">
+
 <p>
     <%! String co; %>
     <%
@@ -73,61 +65,71 @@
     <!--<marquee behavior=slide bgcolor=#FFFFCC><font size=7 color=red face="Arial"><%=co%></font></marquee>
 -->
 </p>
-<div style="position: absolute; width: 465px; height: 134px; z-index: 1; left: 165px; top: 15px" id="layer1">
-    <div style="position: absolute; width: 195px; height: 21px; z-index: 1; left: 164px; top: 57px" id="layer5">
-        <i><b><font color="#800000" face="Bodoni MT" size="2">Connecting People
-            Globally !</font></b></i></div>
-    <blockquote>
-        <h1 align="left"><b>
-            &nbsp;<font size="7" face="Century Schoolbook" color="#800080">G</font><font size="7"
-                                                                                         face="French Script MT"
-                                                                                         color="#800080">lobal
-            Mail </font></b></h1>
-        <p align="left">&nbsp;</p>
-    </blockquote>
-</div>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<blockquote>
-    <p>&nbsp;</p>
+ 
+  <div class="form">
+	
+	<h1><b>Global</B>Mail</h1>
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="signup.jsp">Sign Up</a></li>
+        <li class="tab"><a href="home.jsp">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          
+          <form action="/" method="post">
+          
+          <div class="field-wrap">
+			<input type="text" name="p1" placeholder="Full Name" required autocomplete="off"/>
+          </div>
 
-    <blockquote>
-        <div style="position: absolute; width: 100px; height: 100px; z-index: 5; left: 56px; top: 118px" id="layer9">
-            <input border="0" src="image/signup2.gif" name="I6" width="114" height="145" type="image"></div>
-        <form method=post>
-            <blockquote>
-                <blockquote>
-                    <blockquote>
-						<pre><b><font color="#000080">Name</font></b>		   <font color="#008081"><input type=text
-                                                                                                             name=p1></font><br>
-<b><font color="#000080">UserName</font></b>	   <input type=text name=p2><br>
-<b><font color="#000080">Password</font></b>	   <input type=password name=p31><br>
-<b><font color="#000080">ReTypePassword </font></b>    <input type=password name=p32><br>
-<b><font color="#000080">Secret Question</font>	</b>   <select size="1" name="p4"
-                                                                  style="font-weight: bold; border-style: solid; border-width: 1px">
+          <div class="field-wrap">
+			<input type="email" name="p2" placeholder="UserName" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+			<input type="password" name="p31" placeholder="Password" required autocomplete="off"/>
+          </div>
+          
+           <div class="field-wrap">
+			<input type="password" name="p32" placeholder="Re-Enter Password" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+          <label>Security Question</label>
+			<select size="1" border-width="1px" name="p4" class="secquestions" >
 						<option selected>Who is your favourite player?</option>
 						<option>What is your first phone no?</option>
 						<option>What is your favourite color?</option>
 						<option>What is your favourite food?</option>
-						<option>What is your favourite color</option></select><br>
-<b><font color="#000080">Secret Answer</font></b>	   <input type=text name=p5><br>
-	  	   <input value="<%=co%>"
-                  style="border:1px solid #FFFFFF; borer: 0px solid #FFFFFF; width:145px; height: 30px; font-family:Pristina; font-size:20pt; font-weight:bold; color:#800000; letter-spacing:inherit; text-align:center; background-image:url('image/1.gif')"
-                  tabindex="80" name="t1" size="12" readonly>  <input type=button value="Show Secret Code"
-                                                                      onclick="che()"
-                                                                      style="font-family: Book Antiqua; font-weight: bold; color: #800000; background-color: #000000; background-image: url('image/b1.jpg')"><br>
-<b><font color="#000080">Secret Code</font></b>	   <input type=text name=sec><br>
-  
-		     <input type=button onclick="si()"
-                    style="border:0px solid #FFFFFF; background-image: url('image/signup1.gif')"
-                    value="                    ">
-</pre>
-                    </blockquote>
-                </blockquote>
-            </blockquote>
-        </form>
-    </blockquote>
-</blockquote>
-</body>
+						<option>What is your favourite color</option></select>
+          </div>
+          
+           <div class="field-wrap">
+			<input type="text" name="p5" placeholder="Secret Answer" required autocomplete="off"/>
+          </div>
+          
+          <input value="<%=co%>" class="field-wrap"
+                  style="border:1px solid #FFFFFF; border: 1px solid #FFFFFF; width:145px; height: 40px; font-family:Pristina; font-size:20pt; font-weight:bold; color:black; letter-spacing:inherit; text-align:center; background-image:url('image/v.jpg')"
+                  tabindex="80" name="t1" size="12" readonly>
+                  
+          <div class="field-wrap">
+			<input type="text" name="sec" placeholder="Write the Captcha Here" required autocomplete="off"/>
+          </div>
+          
+          <button onclick="si()" type="submit" class="button button-block"/>Get Started</button>
+          
+          </form>
 
+	  </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
 </html>
